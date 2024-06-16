@@ -1,0 +1,41 @@
+﻿How to Find Wi-Fi Password Using CMD in Windows 11/10?
+There are mainly two methods to view wifi passwords. These methods work in both Windows versions i.e. Windows 10 and Windows 11. Follow the steps and save yourself from resetting your Wi-Fi password!
+Method 1: Check the Wi-Fi password via Network & Internet settings
+Step 1: Connect to the Wi-Fi that you want to know the password, then right-click the [Network] ᯤ icon ① on the taskbar and select [Network and Internet settings] ②.
+
+Check-the-Wi-Fi-password-via-Network-&-Internet-settings_1
+
+Step 2: Select [Advanced network settings] ③.
+Step 3: Under Related settings, select [More network adapter options] ④.
+
+Check-the-Wi-Fi-password-via-Network-&-Internet-settings_3
+
+Step 4: Choose the connected Wi-Fi network ⑤, then select [View status of this connection] ⑥.
+Step 5: Select [Wireless Properties] ⑦.
+
+
+Check-the-Wi-Fi-password-via-Network-&-Internet-settings_5
+
+Step 6: On the [Security] tab of Wireless Network Properties ⑧, check the box [Show characters] ⑨,
+you will see the Wi-Fi password in the Network security key field. 
+
+
+Method 2: Check the Wi-Fi password via Command Prompt
+We can see your forgotten Wi-Fi password by running a couple of quick ‘netsh’ commands using Windows Command Prompt.
+
+Step1: Press start and type CMD, right-click on the Command Prompt option shown as a search result and click on Run as administrator.  
+
+Step 2: Type the following command and press Enter to show a list of network names that we connect to.
+
+netsh wlan show profile 
+
+This command list of all wireless network profiles saved on the computer, including their names and settings as shown below. Select the Wi-Fi you want to know its password. 
+Lets suppose we want to see password for Wi-Fi Name “Gravity”.
+
+Step 3: Now, type the following command and again press enter
+
+netsh wlan show profile name= "Wi-Fi name" key=clear
+This command displays detailed information of that Wi-Fi, including the Profile information, Connectivity settings, Security settings and Cost settings for the specified Wi-Fi network profile.
+
+Step 4: Scroll through the results until we find an entry named Key Content & our Wi-Fi password will be listed next to it.  
+
